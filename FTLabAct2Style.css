@@ -1,0 +1,114 @@
+body {
+    background-image: url(image/bg3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: 'Sono', sans-serif;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+  }
+  body::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.7); 
+
+    z-index: -1; 
+}
+
+
+.pricing-container{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    color: #FFFFFF;
+}
+
+.plan-title{
+    
+    font-size: 2rem;
+    font-weight: 100;
+    
+    
+
+}
+
+.plan-price{
+
+    font-size: 25px;
+    padding-top: 5px;
+    font-weight: bold;
+    color: #FFC300 ;
+}
+
+.plan-title, .plan-price{
+    text-align: center;
+}
+
+.pricing-plan{
+   
+   border: 2px solid #FFD700 ;
+   border-radius: 16px;
+   width: 300px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column; 
+   align-items: center; 
+   transition: background-color 0.2s ease-in, color 0.3s ease, transform 0.2s ease;
+
+   
+}
+
+.pricing-plan:hover{
+    border: 2px solid #FFFFFF;
+    transform: scale(1.1);
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+.plan-button{
+    color: #000; 
+    background-color: #FFD700; 
+    padding: 10px 20px; 
+    border: 2px solid #FFC300; 
+    border-radius: 8px; 
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.plan-button:hover{
+    color: #FFFFFF;
+    transform: scale(1.1);
+    background-color: #FFC300;
+
+}
+
+@media (max-width: 1250px) {
+  .pricing-container{
+    flex-direction: column;
+  }
+  .pricing-plan {
+    padding: 15px;
+}
+
+}
